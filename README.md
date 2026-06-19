@@ -50,6 +50,8 @@ DB_NAME=cinema_db
 DB_USER=user
 DB_PASSWORD=password
 SECRET_JWT_KEY=secret_jwt
+ACCESS_TOKEN_TTL=15m
+REFRESH_TOKEN_TTL=30d
 ```
 
 4. Запустіть сервіс:
