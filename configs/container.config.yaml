@@ -1,0 +1,27 @@
+port: "8080"
+timeout: "5s"
+
+api_gateway_url: "http://gateway:8080"
+
+logger:
+  env: "local"
+  log_level: "debug"
+  log_time_zone: 3
+
+tokens:
+  access_token_ttl: "15m"
+  refresh_token_ttl: "720h"
+
+db:
+  host: "localhost"
+  name: "cinemadb"
+  user: "cinema_app"
+
+s3:
+  url: "s3-minio:9000"
+  public_bucket: "public-media"
+  private_bucket: "raw-media"
+
+rabbitmq:
+  url: "broker-rabbitmq:5672"
+  user: "guest"
