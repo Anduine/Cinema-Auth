@@ -1,4 +1,4 @@
-FROM golang:1.24-alpine3.23 AS builder
+FROM golang:1.27.3-alpine3.24 AS builder
 WORKDIR /app
 
 COPY go.mod go.sum ./
@@ -11,7 +11,7 @@ COPY ./configs/container.config.yaml ./configs/config.yaml
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o auth_bin ./cmd/app/main.go
 
-FROM alpine:3.23.3
+FROM alpine:3.24
 
 WORKDIR /app
 
